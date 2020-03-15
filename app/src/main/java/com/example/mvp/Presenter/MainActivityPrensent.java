@@ -1,6 +1,6 @@
 package com.example.mvp;
 
-import android.view.View;
+import com.example.mvp.Model.User;
 
 public class MainActivityPrensent {
     private User user;
