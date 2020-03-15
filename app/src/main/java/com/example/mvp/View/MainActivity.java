@@ -1,56 +1,55 @@
-package com.example.mvp;
+package com.example.mvp.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.mvp.Presenter.MainActivityPrensent;
+import com.example.mvp.R;
 
 public class MainActivity extends AppCompatActivity implements MainActivityPrensent.View {
 
     private MainActivityPrensent prensent;
-    private TextView MyTextView;
-    private TextView Texto;
-
-
+    private EditText user;
+    private EditText pass;
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MyTextView = findViewById(R.id.name);
-        Texto = findViewById(R.id.name2);
-        // Texto = findViewById(R.id.dato);
-
+        user = findViewById(R.id.user);
+        pass = findViewById(R.id.pass);
+        btn = findViewById(R.id.btnLogin);
 
         prensent = new  MainActivityPrensent(this);
 
-        // prensent.update("Hola Mundo Android");
-
-        MyTextView.addTextChangedListener(new TextWatcher() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                prensent.update(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
+            public void onClick(View v) {
+                prensent.update(user.getText().toString(),pass.getText().toString());
             }
         });
 
     }
 
-    @Override
-    public void updateUserTextView(String Name){
+    public void updateUserTextView(String token){
+        System.out.println("Token "+token);
 
-        Texto.setText(Name);
+        if (token!=null){
+            Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this,HomeActivity.class); //crear el appcomp hacia donde irá
+            intent.putExtra("Token",token);
+            startActivity(intent);
+        }else{
+            Toast.makeText(getApplicationContext(), "An ocurred a error, but not is you, not worry ;)", Toast.LENGTH_SHORT).show();
+        }
+
     }
+
 }

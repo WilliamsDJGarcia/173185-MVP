@@ -1,4 +1,4 @@
-package com.example.mvp;
+package com.example.mvp.Presenter;
 
 import com.example.mvp.Model.User;
 
@@ -9,16 +9,16 @@ public class MainActivityPrensent {
     public MainActivityPrensent(View view){
         this.user = new User();
         this.view = view;
-
     }
 
-    public void update(String Name){
+    public void update(String Name,String Password){
         user.setName(Name);
-        view.updateUserTextView(user.toString());
-
+        user.setPassword(Password);
+        user.into();
+        view.updateUserTextView(user.getToken());
     }
 
     public interface View{
-        void updateUserTextView(String Name);
+        void updateUserTextView(String token);
     }
 }

@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"  android:gravity="center">
 
 
     <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
+        android:id="@+id/user"
+        android:layout_width="322dp"
         android:layout_height="wrap_content"
-        />
+        android:hint="User"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
 
     <EditText
-        android:id="@+id/name2"
-        android:layout_width="wrap_content"
+        android:id="@+id/pass"
+        android:layout_width="322dp"
         android:layout_height="wrap_content"
-        />
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión" />
 
 </LinearLayout>
