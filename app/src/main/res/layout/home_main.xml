@@ -2,21 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#00917F7F"
+    android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/refresh"
+    <TextView
+        android:id="@+id/rfh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        android:background="#000000"
+        android:gravity="center"
+        android:letterSpacing="0.2"
+        android:padding="16dp"
+        android:text="Agregar"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 
     <ScrollView
         android:id="@+id/scrollViewRecords"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_below="@+id/refresh"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginEnd="1dp"
@@ -25,15 +35,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@+id/refresh"
-        app:layout_constraintTop_toBottomOf="@+id/refresh"
-       >
+        app:layout_constraintTop_toBottomOf="@+id/refresh">
 
         <TableLayout
             android:id="@+id/linearLayoutRecords"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
+            android:gravity="center" />
 
     </ScrollView>
 

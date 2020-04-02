@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mvp.Presenter.MainActivityPrensent;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityPrens
     private MainActivityPrensent prensent;
     private EditText user;
     private EditText pass;
-    private Button btn;
+    private TextView lin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityPrens
         setContentView(R.layout.activity_main);
         user = findViewById(R.id.user);
         pass = findViewById(R.id.pass);
-        btn = findViewById(R.id.btnLogin);
+        lin = findViewById(R.id.lin);
 
         prensent = new  MainActivityPrensent(this);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        lin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 prensent.update(user.getText().toString(),pass.getText().toString());
