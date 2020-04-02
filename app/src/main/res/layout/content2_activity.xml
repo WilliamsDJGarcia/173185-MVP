@@ -4,57 +4,145 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"  >
 
+
     <EditText
         android:id="@+id/editTextname"
-        android:layout_width="322dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="43dp"
-        android:layout_marginTop="104dp"
-        android:hint="Name"
-        android:singleLine="true">
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/editTextprovider"
-        android:layout_width="322dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextname"
-        android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="65dp"
-        android:hint="Provider"
-        android:singleLine="true" />
-
-    <EditText
-        android:id="@+id/editTextnet"
-        android:layout_width="322dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextname"
-        android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="157dp"
-        android:hint="Cont.Net."
-        android:singleLine="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginLeft="109dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:background="#00000000"
+        android:hint="Name product"
+        android:inputType="text"
+        android:letterSpacing="0.1"
+        android:textColor="#fff"
+        android:textColorHint="#000000"
+        android:textSize="16dp" />
 
     <EditText
         android:id="@+id/editTextcost"
-        android:layout_width="322dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextname"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginTop="246dp"
-        android:hint="Cost"
-        android:singleLine="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginLeft="106dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:background="#00000000"
+        android:hint="Cost product"
+        android:inputType="text"
+        android:letterSpacing="0.1"
+        android:textColor="#fff"
+        android:textColorHint="#000000"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="455dp"
+        android:src="@drawable/round_monetization_on_black_18dp" />
+
+    <EditText
+        android:id="@+id/editTextnet"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginLeft="106dp"
+        android:layout_marginTop="349dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:background="#00000000"
+        android:hint="Con. neto"
+        android:inputType="text"
+        android:letterSpacing="0.1"
+        android:textColor="#fff"
+        android:textColorHint="#000000"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="354dp"
+        android:src="@drawable/round_move_to_inbox_black_18dp" />
+
+    <EditText
+        android:id="@+id/editTextprovider"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="247dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:background="#00000000"
+        android:hint="Provider product"
+        android:inputType="text"
+        android:letterSpacing="0.1"
+        android:textColor="#fff"
+        android:textColorHint="#000000"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="252dp"
+        android:src="@drawable/round_storefront_black_18dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="132dp"
+        android:src="@drawable/round_assignment_black_18dp" />
+
 
 </RelativeLayout>
